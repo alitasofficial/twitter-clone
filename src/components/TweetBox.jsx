@@ -9,7 +9,7 @@ import {
   ScheduleIcon,
 } from "../icons/icons";
 
-export default function TweetBox() {
+export default function TweetBox({ newTweet }) {
   const [content, setContent] = useState("");
 
   const handleContentChange = (event) => {
@@ -18,7 +18,8 @@ export default function TweetBox() {
   };
 
   const sendTweet = () => {
-    console.log("working");
+    // If content is not empty send data to firebase
+    // and set content and textarea to empty string
     if (content !== "") {
       addDoc(collection(db, "feed"), {
         displayName: "Ali Taş",
@@ -30,6 +31,7 @@ export default function TweetBox() {
       });
     }
     setContent("");
+    newTweet(content);
   };
 
   return (
