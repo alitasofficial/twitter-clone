@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "../firebase";
 import {
   ImageIcon,
   EmojiIcon,
@@ -6,9 +8,6 @@ import {
   PollIcon,
   ScheduleIcon,
 } from "../icons/icons";
-import { db } from "../firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-// import { firebase } from "firebase/compat/app";
 
 export default function TweetBox() {
   const [content, setContent] = useState("");

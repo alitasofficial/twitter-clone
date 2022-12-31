@@ -6,11 +6,11 @@ export default function SideLink({ name, Icon, active, onMenuItemClick }) {
     <li className="group cursor-pointer" onClick={() => onMenuItemClick(name)}>
       <a
         href={name.toLowerCase()}
-        className="block text-xl pointer-events-none"
+        className="pointer-events-none block text-xl"
       >
         <div className="inline-block">
           <div
-            className={`flex items-center mb-2 py-3 px-3 group-hover:bg-gray-100 transform transition duration-200 rounded-full ${
+            className={`mb-2 flex transform items-center rounded-full py-3 px-3 transition duration-200 group-hover:bg-gray-100 ${
               isActive && "text-blue-500"
             }`}
           >
