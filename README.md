@@ -1,3 +1,3 @@
 # Twitter Clone
 
-CRA, Firestore
+React, Tailwind and Firestore
